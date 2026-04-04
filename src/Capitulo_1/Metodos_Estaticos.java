@@ -1,11 +1,10 @@
 package Capitulo_1;
 import java.util.Scanner;
 
-// METODOS ESTATICOS
 public class Metodos_Estaticos {
     public static void main(String[] args) {
 
-        var a=7;
+        int a=7;
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce un número para calcular su factorial y verificar si es primo:");
