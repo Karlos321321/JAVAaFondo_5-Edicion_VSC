@@ -20,16 +20,16 @@ public class App {
                 System.out.println("El 3er dia de la Semana es \"Miercoles\"");
                 break;
             case 4:
-                System.out.println("El 4to dia de la Semana es \"Jueves\"");
+                System.out.println("El 4o dia de la Semana es \"Jueves\"");
                 break;
             case 5:
-                System.out.println("El 5to dia de la Semana es \"Viernes\"");
+                System.out.println("El 5o dia de la Semana es \"Viernes\"");
                 break;
             case 6:
-                System.out.println("El 6to dia de la Semana es \"Sabado\"");
+                System.out.println("El 6o dia de la Semana es \"Sabado\"");
                 break;
             case 7:
-                System.out.println("El 7mo dia de la Semana es \"Domingo\"");
+                System.out.println("El 7o dia de la Semana es \"Domingo\"");
                 break;
             default:
                 System.out.println("Numero no valido, introduce un numero entre 1 y 7.");
