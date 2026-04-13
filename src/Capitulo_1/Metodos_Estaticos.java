@@ -11,7 +11,6 @@ public class Metodos_Estaticos {
         System.out.println("Factorial de " + numero + " es: " + factorial(numero));
         System.out.println(numero + (esPrimo(numero) ? " Sí es primo" : " No es primo"));
 
-        System.out.println(numero + (esPrimo_B(numero) ? " Sí es primo" : " No es primo"));
         scanner.close();
         
     }
@@ -29,3 +28,4 @@ public class Metodos_Estaticos {
         return true; 
     }
 }
+
