@@ -5,7 +5,25 @@ public class App {
 
     public static void main(String[] args) {
 
-        DiaSemana(entraDatos());
+        control_Inicio();
+    }
+
+    public static void control_Inicio(){
+
+        boolean salida = false;
+
+        while (!salida){
+
+            int numero = entraDatos();
+
+            if (numero==0) {
+                System.out.println("SALIENDO DEL PROGRAMA !!! .....");
+                break;
+            }
+
+            diaSemana(numero);
+        
+        }
     }
 
     public static int entraDatos(){
@@ -38,14 +56,12 @@ public class App {
         return numero;
     }
 
-    public static void DiaSemana(int num) {
+    public static void diaSemana(int num) {
         switch (num) {
-            case 0:
-                System.out.println("\nSaliendo del programa...\n");
-                break;  
+
             case 1:
                 System.out.println("El 1er dia de la Semana es \"Lunes\"");
-                break;
+                control_Inicio();
             case 2:
                 System.out.println("El 2o dia de la Semana es \"Martes\"");
                 break;
