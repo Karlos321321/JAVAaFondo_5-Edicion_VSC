@@ -24,13 +24,17 @@ public class App {
 
             } catch (Exception e) {
 
-                System.out.println("\nno es un numero valido, tiene que ser entre 1 y 7.");
+                System.out.println("\nFORMATO INCORRECTO, SOLO SE ADMITEN NUMEROS !!!!");
                 diaSemana.nextLine(); // Limpiar el buffer del scanner
+            }
+
+            if(numero<0 || numero>7) {
+                System.out.println("El numero debe estar entre 1 y 7 !!!!");
+                salida=false;
             }
         }
         
         diaSemana.close();
-
         return numero;
     }
 
