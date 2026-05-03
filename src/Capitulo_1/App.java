@@ -16,12 +16,9 @@ public class App {
 
             int numero = entraDatos();
 
-            if (numero==0) {
-                System.out.println("SALIENDO DEL PROGRAMA !!! .....");
-                break;
-            }
-
             diaSemana(numero);
+
+            
         
         }
     }
@@ -59,6 +56,9 @@ public class App {
     public static void diaSemana(int num) {
         switch (num) {
 
+            case 0:
+                System.out.println("SALIENDO DEL PROGRAMA !!! .....");
+                break;
             case 1:
                 System.out.println("El 1er dia de la Semana es \"Lunes\"");
                 control_Inicio();
