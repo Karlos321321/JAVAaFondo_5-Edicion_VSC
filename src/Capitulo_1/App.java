@@ -1,41 +1,43 @@
 package Capitulo_1;
 import java.util.Scanner;
 
-//Vuelta al MacbookPro M4 Pro
-
 public class App {
 
-    static int numero;
-
     public static void main(String[] args) {
-        Scanner diaSemana = new Scanner(System.in);
-        boolean salida= false;
 
-        while (!salida) {
-            try {
-                System.out.println("Introduce un dia de la semana (1-7): ");
-                numero = diaSemana.nextInt();
-                if (numero == 0) salida = true;
-
-            } catch (Exception e) {
-                // TODO: handle exception
-
-                System.out.println("\nIntroduce un numero valido entre 1 y 7.");
-                numero = 0; // Reiniciar el numero para evitar errores en la siguiente iteracion
-                diaSemana.nextLine(); // Limpiar el buffer del scanner
-            }
-
-            DiaSemana(numero);
-            System.out.println();
-        }
-
-        diaSemana.close();
+        DiaSemana(entraDatos());
     }
 
-    static void DiaSemana(int num) {
-        switch (numero) {
+    public static int entraDatos(){
+
+        Scanner diaSemana = new Scanner(System.in);
+        boolean salida = false;
+        int numero=0;
+
+        while(!salida){
+
+            try {
+                System.out.println("\nIntroduce un dia de la semana (1-7): ");
+                numero = diaSemana.nextInt();
+
+                salida = true;
+
+            } catch (Exception e) {
+
+                System.out.println("\nno es un numero valido, tiene que ser entre 1 y 7.");
+                diaSemana.nextLine(); // Limpiar el buffer del scanner
+            }
+        }
+        
+        diaSemana.close();
+
+        return numero;
+    }
+
+    public static void DiaSemana(int num) {
+        switch (num) {
             case 0:
-                System.out.println("Saliendo del programa...");
+                System.out.println("\nSaliendo del programa...\n");
                 break;  
             case 1:
                 System.out.println("El 1er dia de la Semana es \"Lunes\"");
@@ -58,8 +60,6 @@ public class App {
             case 7:
                 System.out.println("El 7o dia de la Semana es \"Domingo\"");
                 break;
-            default:
-                System.out.println("Introduce un numero valido entre 1 y 7.");
             }
     }
 }
